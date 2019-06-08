@@ -3,7 +3,7 @@
 usage() {
 	cat <<EOF
 usage: 
-        ./toa_android_patcher [path/to/file.apk] [path/to/file.jar]
+        ./TOA_Android_RedHead_patcher [path/to/file.apk] [path/to/file.jar]
 EOF
 }
 
