@@ -10,16 +10,13 @@ And you also need to have installed:
 * apktool
 * apk-signer (link)
 * image-magick
-__
+___
 To use the script:
-```bash
-git clone (link)
-cd /path/to/the/script/directory
-chmod +x TOA_Android_RedHead_patcher.sh
-./TOA_Android_ReadHead_patcher.sh /path/to/the/file.apk /path/to/the/file.jar
-```
+`git clone` (link)
+`cd /path/to/the/script/directory`
+`chmod +x TOA_Android_RedHead_patcher.sh`
+`./TOA_Android_ReadHead_patcher.sh /path/to/the/file.apk /path/to/the/file.jar`
 This will produce a working apk with Joria's mod.
-
 __
 If errors appear during the execution regarding zipaligner they can be ignored without problems.
 
