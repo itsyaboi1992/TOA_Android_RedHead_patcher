@@ -12,7 +12,7 @@ And you also need to have installed:
 * image-magick
 ___
 To use the script:
-* `git clone` https://github.com/sKrTtR/TOA_Android_RedHead_patcher
+* `git clone https://github.com/sKrTtR/TOA_Android_RedHead_patcher`
 * `cd /path/to/the/script/directory`
 * `chmod +x TOA_Android_RedHead_patcher.sh`
 * `./TOA_Android_ReadHead_patcher.sh /path/to/the/file.apk /path/to/the/file.jar`
