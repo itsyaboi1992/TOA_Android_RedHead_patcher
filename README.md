@@ -1,9 +1,9 @@
-This script patches the default Tales Of Androgyny Android application with the wonderful Jorja's RedHead Mod.
+This script patches the default Tales Of Androgyny Android application with the wonderful Jorja's RedHead Mod (or any other graphical overhaul
 ___
 To do this you will need:
 * a working GNU/Linux OS (may work on Mac too)
 * the default Tales Of Androgyny apk
-* Joria's .jar file (possibly of the same version)
+* Jorja's .jar file (possibly of the same version)
 
 And you also need to have installed:
 * unzip
@@ -12,17 +12,17 @@ And you also need to have installed:
 * image-magick
 ___
 To use the script:
-* `git clone` 
+* `git clone` https://github.com/sKrTtR/TOA_Android_RedHead_patcher
 * `cd /path/to/the/script/directory`
 * `chmod +x TOA_Android_RedHead_patcher.sh`
 * `./TOA_Android_ReadHead_patcher.sh /path/to/the/file.apk /path/to/the/file.jar`
+
 This will produce a working apk with Jorja's mod.
-__
-If errors appear during the execution regarding zipaligner they can be ignored without problems.
-
-It's necessary to uninstall the default TOA application before installing the patched one as the signature as been modified.
-
-Google Play also will probably give a warning but it can be ignored too.
+___
+Also:
+* If errors appear during the execution regarding zipaligner they can be ignored without problems.
+* It is necessary to uninstall the default TOA application before installing the patched one since the signature as been modified.
+* Google Play also will probably give a warning but that can be ignored too.
 
 
 
