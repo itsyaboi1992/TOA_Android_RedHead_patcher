@@ -8,7 +8,7 @@ To do this you will need:
 And you also need to have installed:
 * unzip
 * apktool
-* apk-signer (link)
+* [apk-signer](https://github.com/beevelop/apk-signer)
 * image-magick
 ___
 To use the script:
