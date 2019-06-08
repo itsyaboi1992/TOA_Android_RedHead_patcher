@@ -12,11 +12,11 @@ And you also need to have installed:
 * image-magick
 ___
 To use the script:
-`git clone` (link)
-`cd /path/to/the/script/directory`
-`chmod +x TOA_Android_RedHead_patcher.sh`
-`./TOA_Android_ReadHead_patcher.sh /path/to/the/file.apk /path/to/the/file.jar`
-This will produce a working apk with Joria's mod.
+* `git clone` 
+* `cd /path/to/the/script/directory`
+* `chmod +x TOA_Android_RedHead_patcher.sh`
+* `./TOA_Android_ReadHead_patcher.sh /path/to/the/file.apk /path/to/the/file.jar`
+This will produce a working apk with Jorja's mod.
 __
 If errors appear during the execution regarding zipaligner they can be ignored without problems.
 
