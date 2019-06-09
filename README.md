@@ -22,7 +22,7 @@ ___
 Also:
 * If errors appear during the execution regarding zipaligner they can be ignored without problems.
 * It is necessary to uninstall the default TOA application before installing the patched one since the signature as been modified.
-* Google Play also will probably give a warning but that can be ignored too.
+* Google Play also will probably give a warning while trying to install but that can be ignored too.
 
 
 
