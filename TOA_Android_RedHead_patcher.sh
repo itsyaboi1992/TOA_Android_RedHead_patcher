@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#set this to "no" to use the default font instead
+patch_fonts="yes" 	
+
+
 usage() {
 	cat <<EOF
 usage: 
@@ -9,7 +13,7 @@ EOF
 
 
 #check if dependencies are installed
-deps=('unzip' 'apktool' 'apk-signer' 'magick' 'base64')
+deps=('unzip' 'apktool' 'apk-signer' 'zipalign' 'magick' 'base64')
 for i in "${deps[@]}"; do
 	if command -v $i >/dev/null; then
 		:
@@ -74,7 +78,6 @@ for i in "${icons[@]}"; do
 	fi
 done
 
-read foo
 
 #move the files between folders
 while read -r filename; do
@@ -82,7 +85,28 @@ while read -r filename; do
 		rm "$folder_apk/assets/$filename"
 		cp "$folder_jar/$filename" "$folder_apk/assets/$filename" 
 	fi
-done <<< $(cd $folder_apk/assets/; find * -type f | grep '.png\|.jpg\|.ttf\|.fnt') 
+done <<< $(cd $folder_apk/assets/; find * -type f | grep '.png\|.jpg' | grep -v "ArgosGeorge.png\|Bevan.png")
+
+
+#moving fonts manually
+if [[ $patch_fonts == "yes" ]]; then
+	font_files=( 	'ui/ArgosGeorge.fnt' 
+			'ui/ArgosGeorge.png' 
+			'ui/ArgosGeorge.ttf' 
+			'battle/ui/Bevan.fnt' 
+			'battle/ui/Bevan.png')
+
+	for i in "${font_files[@]}"; do
+		font_path_apk="$folder_apk/assets/$i"
+		font_path_jar="$folder_jar/$i"
+		if [[ -f "$font_path_apk" ]]; then
+			rm "$font_path_apk"
+		fi
+		if [[ -f "$font_path_jar" ]]; then
+			cp -v "$font_path_jar" "$font_path_apk"
+		fi
+	done
+fi
 
 
 #now rebuild the apk
@@ -143,7 +167,7 @@ base64 -d < "$keystore_txt" > "$keystore"
 
 
 #sign the apk
-apk_signed="$main_dir/Tales_of_Androgyny-RedHead-Android.apk"
+apk_signed="$main_dir/Tales_of_Androgyny_RedHead_Android.apk"
 apk-signer -f "$rebuilt_apk" -a "skrttrkey" -k "$keystore" -s "xyzfoobarxyz" -o "$apk_signed"
 
 
