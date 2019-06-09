@@ -51,9 +51,17 @@ apktool decode "$apk_path" -o "$folder_apk"
 
 
 #change the default icon
-icons=('mipmap-hdpi' 'mipmap-mdpi' 'mipmap-xhdpi' 'mipmap-xxhdpi')
+icons=( 'res/mipmap-hdpi/toa_launcher.png' 
+	'res/mipmap-mdpi/toa_launcher.png' 
+	'res/mipmap-xhdpi/toa_launcher.png' 
+	'res/mipmap-xxhdpi/toa_launcher.png' 
+	'assets/icon16.png' 
+	'assets/icon32.png' 
+	'assets/icon128.png')
+	
+	
 for i in "${icons[@]}"; do
-	icon_path="$folder_apk/res/$i/toa_launcher.png"
+	icon_path="$folder_apk/$i"
 	if [[ -f $icon_path ]]; then
 		convert\
 		$icon_path\
@@ -66,6 +74,7 @@ for i in "${icons[@]}"; do
 	fi
 done
 
+read foo
 
 #move the files between folders
 while read -r filename; do
@@ -73,7 +82,7 @@ while read -r filename; do
 		rm "$folder_apk/assets/$filename"
 		cp "$folder_jar/$filename" "$folder_apk/assets/$filename" 
 	fi
-done <<< $(cd $folder_apk/assets/; find * -type f | grep '.png\|.jpg' | grep -v "ArgosGeorge") #removed '.ttf' because it seems to not work on Android
+done <<< $(cd $folder_apk/assets/; find * -type f | grep '.png\|.jpg\|.ttf\|.fnt') 
 
 
 #now rebuild the apk
