@@ -1,4 +1,4 @@
-This script patches the default Tales Of Androgyny Android application with the wonderful Jorja's RedHead Mod (or any other graphical overhaul
+This script patches the default Tales Of Androgyny Android application with the wonderful Jorja's RedHead Mod (or any other graphical overhaul)
 ___
 To do this you will need:
 * a working GNU/Linux OS (may work on Mac too)
