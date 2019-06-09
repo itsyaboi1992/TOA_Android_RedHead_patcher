@@ -9,6 +9,7 @@ And you also need to have installed:
 * unzip
 * apktool
 * [apk-signer](https://github.com/beevelop/apk-signer)
+* zipalign (included in android-sdk-build-tools)
 * image-magick
 ___
 To use the script:
@@ -20,7 +21,7 @@ To use the script:
 This will produce a working apk with Jorja's mod.
 ___
 Also:
-* If errors appear during the execution regarding zipaligner they can be ignored without problems.
+* If you don't desire to use the custom fonts included with the mods, just set 'patch_fonts="yes"' to 'no' at the very beginning of the script.
 * It is necessary to uninstall the default TOA application before installing the patched one since the signature as been modified.
 * Google Play also will probably give a warning while trying to install but that can be ignored too.
 
