@@ -62,8 +62,7 @@ icons=( 'res/mipmap-hdpi/toa_launcher.png'
 	'assets/icon16.png' 
 	'assets/icon32.png' 
 	'assets/icon128.png')
-	
-	
+		
 for i in "${icons[@]}"; do
 	icon_path="$folder_apk/$i"
 	if [[ -f $icon_path ]]; then
@@ -99,10 +98,8 @@ if [[ $patch_fonts == "yes" ]]; then
 	for i in "${font_files[@]}"; do
 		font_path_apk="$folder_apk/assets/$i"
 		font_path_jar="$folder_jar/$i"
-		if [[ -f "$font_path_apk" ]]; then
+		if [[ -f "$font_path_apk" ]] && [[ -f "$font_path_jar" ]]; then
 			rm "$font_path_apk"
-		fi
-		if [[ -f "$font_path_jar" ]]; then
 			cp -v "$font_path_jar" "$font_path_apk"
 		fi
 	done
