@@ -22,7 +22,7 @@ This will produce a working apk with Jorja's mod.
 ___
 Also:
 * If you don't desire to use the custom fonts included with the mod, just set `patch_fonts="yes"` to `no` at the very beginning of the script.
-* It is necessary to uninstall the default TOA application before installing the patched one since the signature as been modified.
+* It is necessary to uninstall the default TOA application before installing the patched one since the signature has been modified.
 * Google Play will probably give a warning while trying to install but that can be ignored.
 
 
